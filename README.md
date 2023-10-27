@@ -20,6 +20,10 @@
 ![image](https://github.com/InfernoCycle/TrueYTtoMP3/assets/105338348/b8900c27-59ce-4ba7-ad75-10dfa5392bdc)
 
 5. After you have done all this you can now download the executable [here](https://drive.google.com/file/d/1gqsMojcxAj_dRJRLf1hsyXkg8CWSjqWq/view?usp=drive_link) and run it.
+![image](https://github.com/InfernoCycle/TrueYTtoMP3/assets/105338348/69f6a138-82b7-4c41-a6c6-5c3db4ae8da3)
+
+# Security
+You may get blocked by windows defender or any anti-virus such as Norton or McAfee. Just allow the application to run to use it.
 
 # Bugs and Updates Required
 Because this application is heavily supported by FFMPEG and the [YoutubeDL library](https://github.com/ytdl-org/youtube-dl) this application may stop working until I send out a new distribution of this distribution. So to indicate that a new distribution has released I will place version number at the top of this read.me
