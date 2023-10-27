@@ -1,9 +1,9 @@
 # TrueYTtoMP3
 
-#Version
+# Version
 1.0
 
-#How to Install
+# How to Install
 1. First Download the folder/files from [here](https://drive.google.com/drive/folders/1Xkd6QZQocnWYIHb6Om-vRh5mvJPjeA7T?usp=drive_link) by clicking "bin" and then "download" as seen in the pic below.
 ![image](https://github.com/InfernoCycle/TrueYTtoMP3/assets/105338348/7a70beac-39ab-4559-961b-12298251ff00)
 
@@ -21,8 +21,8 @@
 
 5. After you have done all this you can now download the executable [here](https://drive.google.com/file/d/1gqsMojcxAj_dRJRLf1hsyXkg8CWSjqWq/view?usp=drive_link) and run it.
 
-#Bugs and Updates Required
+# Bugs and Updates Required
 Because this application is heavily supported by FFMPEG and the [YoutubeDL library](https://github.com/ytdl-org/youtube-dl) this application may stop working until I send out a new distribution of this distribution. So to indicate that a new distribution has released I will place version number at the top of this read.me
 
-#Disclaimer
+# Disclaimer
 I am not responsible for any copyright troubles you (the user) may incur during use of this application. 
