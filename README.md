@@ -7,9 +7,7 @@
 
 2. After downloading the zip file. unzip the contents by right clicking the new zip and clicking "Extract All". After extracting click the new folder until you see another folder called "bin"
 ![image](https://github.com/InfernoCycle/TrueYTtoMP3/assets/105338348/f10f18dc-81b3-4f2a-82e5-d9fc0045b317)
-
 ![image](https://github.com/InfernoCycle/TrueYTtoMP3/assets/105338348/84c199fa-5328-4b7b-827a-f5239abd03f6)
-
 ![image](https://github.com/InfernoCycle/TrueYTtoMP3/assets/105338348/e094b2a7-6d28-4fd9-83af-c4e95df37958)
 
 4. Click and open the "bin" folder. It should contain 3 executables (ffmpeg, ffplay, and ffprobe). Now copy the full path of the "bin" directory. Example of path: "C:\<whatever path you have>\bin-20231027T220332Z-001\bin".
