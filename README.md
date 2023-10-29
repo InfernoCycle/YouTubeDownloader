@@ -1,5 +1,8 @@
 # TrueYTtoMP3
 
+# What is this?
+This is a YouTube to MP3/MP4/WAV/OGG convertor. I just made it because I didn't feel safe using shady websites that always had ad pop-ups whenever I clicked one button every 10 seconds. Feel free to use this convertor as well. It may not be the best but it gets the job done.
+
 # Version
 1.0
 
@@ -27,6 +30,9 @@ You may get blocked by windows defender or any anti-virus such as Norton or McAf
 
 # Bugs and Updates Required
 Because this application is heavily supported by FFMPEG and the [YoutubeDL library](https://github.com/ytdl-org/youtube-dl) this application may stop working until I send out a new distribution of this distribution. So to indicate that a new distribution has released I will place version number at the top of this read.me
+
+# Feedback
+I would appreciate any feedback or issues that any user provides.
 
 # Disclaimer
 I am not responsible for any copyright troubles you (the user) may incur during use of this application. 
