@@ -32,7 +32,7 @@ You may get blocked by windows defender or any anti-virus such as Norton or McAf
 Because this application is heavily supported by FFMPEG and the [YoutubeDL library](https://github.com/ytdl-org/youtube-dl) this application may stop working until I send out a new distribution of this distribution. So to indicate that a new distribution has released I will place version number at the top of this read.me
 
 # Supported Operating Systems
-Windows 8.1, Windows 10, Windows 11
+Windows 8.1, 10, and 11
 
 # Feedback
 I would appreciate any feedback or issues that any user provides.
