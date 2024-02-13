@@ -25,7 +25,7 @@ This is a YouTube to MP3/MP4/WAV/OGG convertor. I just made it because I didn't 
 5. Test to see if you successfully added the bin folder to your path by going to the command promp and typing "ffmpeg"
 ![image](https://github.com/InfernoCycle/TrueYTtoMP3/assets/105338348/e24ffe45-c2c7-4a54-8ccc-e82bc1221668)
 
-6. After you have done everything above you can now download the executable [here](https://drive.google.com/file/d/16NbMdQUDDjpaPi__76gnMC4jLyfpT-TV/view?usp=sharing) and run it.
+6. After you have done everything above you can now download the executable [here](https://drive.google.com/file/d/1NvHIYW-IU9Sh_LDPWy5uDr0E4IHMtB1s/view?usp=drive_link) and run it.
 ![image](https://github.com/InfernoCycle/TrueYTtoMP3/assets/105338348/69f6a138-82b7-4c41-a6c6-5c3db4ae8da3)
 
 # Security
