@@ -8,7 +8,7 @@ This is a YouTube to MP3/MP4/WAV/OGG convertor. I just made it because I didn't 
 
 # How to Install
 1. First Download the folder/files from [here](https://drive.google.com/drive/folders/1Xkd6QZQocnWYIHb6Om-vRh5mvJPjeA7T?usp=drive_link) by clicking "bin" and then "download" as seen in the pic below.
-![image](https://github.com/InfernoCycle/TrueYTtoMP3/assets/105338348/7a70beac-39ab-4559-961b-12298251ff00)
+![image](https://github.com/InfernoCycle/TrueYTtoMP3/assets/105338348/7a70beac-39ab-4559-961b-12298251ff00) or by downloading the zip from [gyan](https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip)
 
 2. After downloading the zip file. unzip the contents by right clicking the new zip and clicking "Extract All". After extracting click the new folder until you see another folder called "bin"
 ![image](https://github.com/InfernoCycle/TrueYTtoMP3/assets/105338348/f10f18dc-81b3-4f2a-82e5-d9fc0045b317)
