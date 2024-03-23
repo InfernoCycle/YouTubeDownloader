@@ -6,7 +6,9 @@ This is a YouTube to MP3/MP4/WAV/OGG convertor. I just made it because I didn't 
 # Version
 1.0
 
-# How to Install
+<!--# How to Install
+You can download the full version [here](https://github.com/InfernoCycle/TrueYTtoMP3/releases/download/v1.0.0/Inferno_YTtoMP3.exe)
+
 1. First Download the folder/files from [here](https://drive.google.com/drive/folders/1Xkd6QZQocnWYIHb6Om-vRh5mvJPjeA7T?usp=drive_link) by clicking "bin" and then "download" as seen in the pic below. You can also download the zip from [gyan](https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip)
 
 ![image](https://github.com/InfernoCycle/TrueYTtoMP3/assets/105338348/7a70beac-39ab-4559-961b-12298251ff00)
@@ -34,7 +36,7 @@ This is a YouTube to MP3/MP4/WAV/OGG convertor. I just made it because I didn't 
 11. After you have done everything above you can now download the executable [here](https://github.com/InfernoCycle/TrueYTtoMP3/releases/download/v1.0.0/YTtoMP3.exe) and run it.
 
 ![image](https://github.com/InfernoCycle/TrueYTtoMP3/assets/105338348/69f6a138-82b7-4c41-a6c6-5c3db4ae8da3)
-
+-->
 # Security
 You may get blocked by windows defender or any anti-virus such as Norton or McAfee. Just allow the application to run to use it.
 
