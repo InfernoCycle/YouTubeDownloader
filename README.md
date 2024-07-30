@@ -1,5 +1,8 @@
 # TrueYTtoMP3
 
+# NOTICE
+This project is under re-development and will be improved!!!! As of right now however it is currently not working so expect a new version by August 7th.
+
 # What is this?
 This is a YouTube to MP3/MP4/WAV/OGG convertor. I just made it because I didn't feel safe using shady websites that always had ad pop-ups whenever I clicked one button every 10 seconds. Feel free to use this convertor as well. It may not be the best but it gets the job done.
 
