@@ -1,6 +1,6 @@
 # TrueYTtoMP3
 
-# NOTICE
+# NOTICE!!!!
 This project is under re-development and will be improved!!!! As of right now however it is currently not working so expect a new version by August 7th.
 
 # What is this?
