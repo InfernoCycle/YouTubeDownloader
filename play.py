@@ -2,7 +2,7 @@ import subprocess
 from subprocess import PIPE
 
 from widgets.main_widget import MainWidget
-from PySide6 import QtWidgets
+from PySide2 import QtWidgets
 import sys
 
 
@@ -19,7 +19,7 @@ if (__name__ == "__main__"):
     
     widget = MainWidget()
     widget.show()
-    sys.exit(app.exec())
+    sys.exit(app.exec_())
     """
     app = CTk()
     
