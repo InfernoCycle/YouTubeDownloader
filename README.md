@@ -8,6 +8,7 @@ TrueYTtoMP3/Crossfield is a simple downloader for YouTube videos into the format
 
 * [Installations](#installations)
   * [Releases](#releases)
+* [Getting Started](#getting-started)
 * [Usage](#usage)
   * [URLs](#urls)
   * [Available Formats](#available-formats)
@@ -16,6 +17,13 @@ TrueYTtoMP3/Crossfield is a simple downloader for YouTube videos into the format
   * [Media Options](#media-options)
 * [Version](#version)
 * [Things To Know](#things-to-know)
+* [Sources Used](#sources-used)
+  * [First Time Running The Application](#first-time-running-the-application)
+  * [Differences between Version 1.1.0 and 2.0.0](#differences-between-version-110-and-200)
+  * [Future Operating System Support](#future-operating-system-support)
+  * [Delayed Downloads and Failure of Downloads](#delayed-downloads-and-failure-of-downloads)
+  * [Bugs and Future Updates](#bugs-and-future-updates)
+  * [Disclaimer](#disclaimer)
 
 # Installations
 There are only window releases for this program. There will be future updates for linux users someday.
@@ -29,6 +37,10 @@ File|Description
 :---|:---
 [CrossfieldPlus](https://github.com/InfernoCycle/TrueYTtoMP3/releases/tag/v2.0.0)|Download zip for Windows 10 and 11. (ffmpeg and ffprobe included Uses Pyside6)
 [Crossfield](https://github.com/InfernoCycle/TrueYTtoMP3/releases/tag/v1.1.0)|Download zip for Windows 8 and up. (ffmpeg and ffprobe included. Uses PySide2)
+
+# Getting Started
+Unzip either the 'CrossfieldPlus' or 'Crossfield' zip file and leave the contents inside where they are in the unzipped folder. You can either run the `CrossfieldPlus.exe` or `Crossfield.exe` file directly or create a shortcut to put anywhere on your computer.
+
 
 # Usage
 How to use the program.
@@ -45,11 +57,17 @@ Multiple URL's can be entered as long as they are seperated by a comma.
 
     url1, ur2, url3, etc
 
+![image](https://github.com/user-attachments/assets/68e6b71d-34d8-41d0-bbec-52365ad8ee68)
+
+
 ## Available Formats
 Available formats include:
 
 - Audio: `aac, alac, flac, m4a, mp3, opus, wav, ogg`
 - Video: `avi, flv, mkv, mov, mp4, webm, 3gp`
+
+![image](https://github.com/user-attachments/assets/c8e3c7e5-b858-4e19-95c6-7688939c33da)
+
 
 > [!NOTE]
 > All formats can be found on yt-dlp postprocessor ffmpeg [page](https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/postprocessor/ffmpeg.py).
@@ -66,6 +84,9 @@ By default the download location will be the current directory of the executable
 You can name each file that is downloaded in the 'Name' tab by seperating each name by a comma.
 
     name1, name2, name3, etc
+
+![image](https://github.com/user-attachments/assets/95029d8e-062a-4abf-aeda-d9269ba14a9f)
+
 
 > [!NOTE]
 > If there are more url's/downloads than names entered, then the filename will default to the video title.
@@ -92,7 +113,7 @@ Audio Options Example:
 
 # Version
 - Version 2.0.0 (For Windows 10 and 11)
-- Version 1.1.0 (For Windows 7 and Up)
+- Version 1.1.0 (For Windows 8 and Up)
 
 # Things To Know
 Some important things to know when using the application.
@@ -102,21 +123,24 @@ The first few times you run this application, please be ready to wait at least 2
 
 ## Differences between Version 1.1.0 and 2.0.0
 - 1.1.0 uses PySide2 as the GUI framework while 2.0.0 uses PySide6
-- 1.1.0 supports Windows 7 and up while 2.0.0 supports Windows 10 and 11
+- 1.1.0 supports Windows 8 and up while 2.0.0 supports Windows 10 and 11
 - I will focus more on the 2.0.0 version as more and more user's switch to newer operating systems.
 
 ## Future Operating System Support
 - I have no idea when I will add support for systems other than Windows. There is a chance however.
 
-## Failure of Downloads
+## Delayed Downloads and Failure of Downloads
+- There is a default delay between downloads set to 5 seconds to avoid getting IP banned.
 - Sometimes downloads will fail due to an invalid URL or the page itself is down or it can also mean you were banned from downloading from that page due to excessive downloads.
 - Please be careful when downloading too much and limit downloads to at most 10 a day.
-
-## Delayed Downloads
-- There is a default delay between downloads set to 5 seconds to avoid getting IP banned.
 
 ## Bugs and Future Updates
 - There has been reports where the progress bar will freeze even after a download has finished. A fix is in the works.
 
 ## Disclaimer
 I am not responsible for any IP bans or copyright crimes that a user may incur with the use of this product.
+
+# Sources Used
+1. [ffmpeg and ffprobe](https://www.ffmpeg.org/)
+2. [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+3. [python](https://www.python.org/downloads/)
