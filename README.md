@@ -81,10 +81,18 @@ Audio Options Example:
 - Version 1.1.0 (For Windows 7 and Up)
 
 # Things To Know
+Some important things to know when using the application.
 
 ## Supported Operating Systems
 - This application only works for Window 7 and up devices.
 - There are no releases for Linux/Unix and macOS devices.
+
+## Failure of Downloads
+- Sometimes downloads will fail due to an invalid URL or the page itself is down or it can also mean you were banned from downloading from that page due to excessive downloads.
+- Please be careful when downloading too much and limit downloads to at most 10 a day.
+
+## Delayed Downloads
+- There is a default delay between downloads set to 5 seconds to avoid getting IP banned.
 
 ## Bugs and Future Updates
 - There has been reports where the progress bar will freeze even after a download has finished. A fix is in the works.
