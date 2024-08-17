@@ -4,10 +4,24 @@
 
 </div>
 
+TrueYTtoMP3/Crossfield is a simple downloader for YouTube videos into the format you want. Unlike online downloaders, this one doesn't include ads and is completely free to use.
+
+* [Installations](#installations)
+  * [Releases](#releases)
+* [Usage](#usage)
+  * [URLs](#urls)
+  * [Available Formats](#available-formats)
+  * [Download Location](#download-location)
+  * [Naming Files](#naming-files)
+  * [Media Options](#media-options)
+* [Version](#version)
+* [Things To Know](#things-to-know)
+
 # Installations
 There are only window releases for this program. There will be future updates for linux users someday.
 
 ## Releases
+Available downloads for the application.
 
 #### Zips
 
@@ -77,15 +91,22 @@ Audio Options Example:
 
 
 # Version
-- Version 2.0 (For Windows 10 and 11)
+- Version 2.0.0 (For Windows 10 and 11)
 - Version 1.1.0 (For Windows 7 and Up)
 
 # Things To Know
 Some important things to know when using the application.
 
-## Supported Operating Systems
-- This application only works for Window 7 and up devices.
-- There are no releases for Linux/Unix and macOS devices.
+## First Time Running The Application
+The first few times you run this application, please be ready to wait at least 2 to 3 minutes for it to open. This should not happen too many times after using the program.
+
+## Differences between Version 1.1.0 and 2.0.0
+- 1.1.0 uses PySide2 as the GUI framework while 2.0.0 uses PySide6
+- 1.1.0 supports Windows 7 and up while 2.0.0 supports Windows 10 and 11
+- I will focus more on the 2.0.0 version as more and more user's switch to newer operating systems.
+
+## Future Operating System Support
+- I have no idea when I will add support for systems other than Windows. There is a chance however.
 
 ## Failure of Downloads
 - Sometimes downloads will fail due to an invalid URL or the page itself is down or it can also mean you were banned from downloading from that page due to excessive downloads.
