@@ -1,32 +1,35 @@
-# TrueYTtoMP3
 
 # NOTICE!!!!
-~~This project is under re-development and will be improved!!!! As of right now however it is currently not working so expect a new version by August 7th.~~
 A new version of the downloader is now out. This page will be updated accordingly by August 16th.
 
-# What is this?
-~~This is a YouTube to MP3/MP4/WAV/OGG convertor. I just made it because I didn't feel safe using shady websites that always had ad pop-ups whenever I clicked one button every 10 seconds. Feel free to use this convertor as well. It may not be the best but it gets the job done.~~
-
 # Version
-~~1.0~~ Version 2.0 is in Pre-Release and can be downloaded right now.
+Version 2.0 is in Pre-Release and can be downloaded right now.
 
-# How to Install
-Coming Soon
+# Installations
+There are only window releases for this program. There will be future updates for linux users someday.
 
-# Security
-You may get blocked by windows defender or any anti-virus such as Norton or McAfee. Just allow the application to run to use it.
+## Releases
 
-# Bugs and Updates Required
-~~Because this application is heavily supported by FFMPEG and the [YoutubeDL library](https://github.com/ytdl-org/youtube-dl) this application may stop working until I send out a new distribution of this distribution. So to indicate that a new distribution has released I will place version number at the top of this read.me~~
-Still in testing but has seen some successful results.
+#### Zips
+File|Description
+:---|:---
+[CrossfieldPlus](https://github.com/InfernoCycle/TrueYTtoMP3/releases/tag/v2.0.0)|Download zip for Windows 10 and 11. (ffmpeg and ffprobe included Uses Pyside6)
+[Crossfield](https://github.com/InfernoCycle/TrueYTtoMP3/releases/tag/v1.1.0)|Download zip for Windows 8 and up. (ffmpeg and ffprobe included. Uses PySide2)
 
-# Supported Operating Systems
-~~Windows 8.1, 10, and 11~~
-Only Tested on Windows 10
+# Usage
+## URLs
+Multiple URL's can be entered as long as they are seperated by comma's
+url1, ur2, url3, etc
 
-# Feedback
-~~I would appreciate any feedback or issues that any user provides.~~
+# Good To Know
 
-# Disclaimer
-~~I am not responsible for any copyright troubles you (the user) may incur during use of this application.~~
+## Bugs and Future Updates
+- There has been reports where the progress bar will freeze even after a download has finished. A fix is in the works.
+- 
+
+## Supported Operating Systems
+- This application only works for Window 7 and up devices.
+- There are no releases for Linux/Unix and macOS devices.
+
+## Disclaimer
 I am not responsible for any IP bans or copyright crimes that a user may incur with the use of this product.
