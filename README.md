@@ -1,6 +1,7 @@
 <div align="center">
-  <img src=https://github.com/InfernoCycle/TrueYTtoMP3/blob/main/banner/generated-1785fb59b35d01e34f76f4e174244d14ddeccadb4ad7bf5dd5ee7e4f42fcb211-7.jpg
- />
+  
+[![yttomp3](https://raw.githubusercontent.com/InfernoCycle/TrueYTtoMP3/main/assets/.github/generated-1785fb59b35d01e34f76f4e174244d14ddeccadb4ad7bf5dd5ee7e4f42fcb211-7.jpg)](#readme)
+
 </div>
 
 # Installations
@@ -15,10 +16,12 @@ File|Description
 [Crossfield](https://github.com/InfernoCycle/TrueYTtoMP3/releases/tag/v1.1.0)|Download zip for Windows 8 and up. (ffmpeg and ffprobe included. Uses PySide2)
 
 # Usage
-## URLs
-Multiple URL's can be entered as long as they are seperated by comma's
+* [URLs](#URLs)
 
-> url1, ur2, url3, etc
+## URLs
+Multiple URL's can be entered as long as they are seperated by a comma.
+
+    Example: url1, ur2, url3, etc
 
 # Version
 Version 2.0 is in Pre-Release and can be downloaded right now.
