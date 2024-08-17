@@ -1,6 +1,6 @@
-from PySide6.QtCore import Slot
-from PySide6 import QtCore
-from PySide6.QtWidgets import QSizePolicy, QLineEdit, QWidget, QPushButton, QLabel, QVBoxLayout
+from PySide2.QtCore import Slot
+from PySide2 import QtCore
+from PySide2.QtWidgets import QSizePolicy, QLineEdit, QWidget, QPushButton, QLabel, QVBoxLayout
 
 #The main widget for the whole app.
 class FileName(QWidget):

@@ -1,6 +1,6 @@
-from PySide6.QtCore import Slot
-from PySide6 import QtCore
-from PySide6.QtWidgets import QGridLayout, QSizePolicy, QFileDialog, QWidget, QTextEdit, QPushButton, QLabel, QVBoxLayout
+from PySide2.QtCore import Slot
+from PySide2 import QtCore
+from PySide2.QtWidgets import QGridLayout, QSizePolicy, QFileDialog, QWidget, QTextEdit, QPushButton, QLabel, QVBoxLayout
 import random
 import json
 from os import path

@@ -1,6 +1,6 @@
-from PySide6.QtCore import Slot, QThread, Signal
-from PySide6 import QtCore
-from PySide6.QtWidgets import QSizePolicy, QComboBox, QButtonGroup, QRadioButton, QWidget, QTextEdit, QPushButton, QLabel, QVBoxLayout, QHBoxLayout
+from PySide2.QtCore import Slot, QThread, Signal
+from PySide2 import QtCore
+from PySide2.QtWidgets import QSizePolicy, QComboBox, QButtonGroup, QRadioButton, QWidget, QTextEdit, QPushButton, QLabel, QVBoxLayout, QHBoxLayout
 #from subprocess import Popen, PIPE #used for backup only
 import re, regex #both used due to testing
 #import asyncio, threading # these were no longer needed
