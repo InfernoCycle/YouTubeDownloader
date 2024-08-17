@@ -1,6 +1,6 @@
-from PySide6.QtCore import Slot, QThread, Signal
-from PySide6 import QtCore
-from PySide6.QtWidgets import QSizePolicy, QTabWidget, QWidget, QTextEdit, QPushButton, QLabel, QVBoxLayout, QHBoxLayout, QProgressBar
+from PySide2.QtCore import Slot, QThread, Signal
+from PySide2 import QtCore
+from PySide2.QtWidgets import QSizePolicy, QTabWidget, QWidget, QTextEdit, QPushButton, QLabel, QVBoxLayout, QHBoxLayout, QProgressBar
 from .options.options_widget import FileType
 from .options.location import FileLocation
 from .options.filename import FileName
@@ -124,7 +124,7 @@ class WorkerThread(QThread):
             
             #print(self.apply_all_one.checkedButton().text())
             
-            time.sleep(0)
+            time.sleep(5)
             
             if(self.bail):
                 self.end()
