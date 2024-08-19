@@ -17,13 +17,13 @@ TrueYTtoMP3/Crossfield is a simple downloader for YouTube videos into the format
   * [Media Options](#media-options)
 * [Version](#version)
 * [Things To Know](#things-to-know)
-* [Sources Used](#sources-used)
   * [First Time Running The Application](#first-time-running-the-application)
   * [Differences between Version 1.1.0 and 2.0.0](#differences-between-version-110-and-200)
   * [Future Operating System Support](#future-operating-system-support)
   * [Delayed Downloads and Failure of Downloads](#delayed-downloads-and-failure-of-downloads)
   * [Bugs and Future Updates](#bugs-and-future-updates)
   * [Disclaimer](#disclaimer)
+* [Sources Used](#sources-used)
 
 # Installations
 There are only window releases for this program. There will be future updates for linux users someday.
