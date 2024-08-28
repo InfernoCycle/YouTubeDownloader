@@ -80,7 +80,7 @@ class WorkerThread(QThread):
             #return "bv+ba/b*" #get best video and best aduio and combine them to one file. else combine best available formats to one file
         
         if(id1 == "Regular" and id2 != "Regular"): #audio is regular/default, video is different
-            return id2 + "[vcodec*="+vcodec+"]"+"ba/bv+ba" #get best audio and whatever video option user chose else get best available combined formats
+            return id2 + "[vcodec*="+vcodec+"]"+"+ba/bv+ba" #get best audio and whatever video option user chose else get best available combined formats
 
         if(id1 != "Regular" and id2 == "Regular"): #video is regular/default, audio is different
             return id1 + "+bv[vcodec*="+vcodec+"]"+"/bv[vcodec*="+vcodec+"]" + "+ba" #get best video and whatever audio option user chose else get best available combined formats
