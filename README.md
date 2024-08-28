@@ -35,8 +35,8 @@ Available downloads for the application.
 
 File|Description
 :---|:---
-[CrossfieldPlus](https://github.com/InfernoCycle/TrueYTtoMP3/releases/download/v2.0.0/CrossfieldPlus.zip)|Download zip for Windows 10 and 11. (ffmpeg and ffprobe included Uses Pyside6)
-[Crossfield](https://github.com/InfernoCycle/TrueYTtoMP3/releases/download/v1.1.0/Crossfield.zip)|Download zip for Windows 8 and up. (ffmpeg and ffprobe included. Uses PySide2)
+[CrossfieldPlus](https://github.com/InfernoCycle/TrueYTtoMP3/releases/download/v2.0.1/CrossfieldPlus.zip)|Download zip for Windows 10 and 11. (ffmpeg and ffprobe included Uses Pyside6)
+[Crossfield](https://github.com/InfernoCycle/TrueYTtoMP3/releases/download/v1.1.1/Crossfield.zip)|Download zip for Windows 8 and up. (ffmpeg and ffprobe included. Uses PySide2)
 
 # Getting Started
 Unzip either the 'CrossfieldPlus' or 'Crossfield' zip file and leave the contents inside where they are in the unzipped folder. You can either run the `CrossfieldPlus.exe` or `Crossfield.exe` file directly or create a shortcut to put anywhere on your computer.
