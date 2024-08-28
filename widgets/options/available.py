@@ -83,7 +83,9 @@ class Available(QWidget):
                 self.audiobox.insertItem(1, "No Audio")
     
     def add_item(self, vid_str):
-        self.formats.addItem(vid_str)
+        contains = re.search("(vp9|vp09)", vid_str)
+        if(contains == None):
+            self.formats.addItem(vid_str)
     
     def add_audio(self, aud_str):
         self.audiobox.addItem(aud_str)
