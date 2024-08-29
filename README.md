@@ -19,6 +19,9 @@ TrueYTtoMP3/Crossfield is a simple downloader for YouTube videos into the format
 * [Things To Know](#things-to-know)
   * [First Time Running The Application](#first-time-running-the-application)
   * [Differences between Version 1.1.0 and 2.0.0](#differences-between-version-110-and-200)
+  * [Choosing Correct Video and Audio Options in Formats Tab](#choosing-correct-video-and-audio-options-in-formats-tab)
+  * [Defaults](#defaults)
+  * [Config and Log Files](#config-and-log-files)
   * [Future Operating System Support](#future-operating-system-support)
   * [Delayed Downloads and Failure of Downloads](#delayed-downloads-and-failure-of-downloads)
   * [Bugs and Future Updates](#bugs-and-future-updates)
@@ -125,6 +128,34 @@ The first few times you run this application, please be ready to wait at least 2
 - 1.1.0 uses PySide2 as the GUI framework while 2.0.0 uses PySide6
 - 1.1.0 supports Windows 8 and up while 2.0.0 supports Windows 10 and 11
 - I will focus more on the 2.0.0 version as more and more user's switch to newer operating systems.
+
+## Choosing Correct Video and Audio Options in Formats Tab
+- There are different options that can appear after searching for available formats. Please pay special attention that you choose a format that is supported on your system. There are different video codecs (vcodec value) that may appear which may begin with "vp", "avc", "av01", and any other codec available as shown below (av01 not shown).
+
+![image](https://github.com/user-attachments/assets/68e47ad3-82c7-47b9-a267-eb921af055b0)
+
+- From some testing, I found that formats with a codec starting with "avc" were more likely to be supported than formats with codecs starting with "vp", and "av01". I am by no means an expert on codecs and their differences so please try out what is best.
+
+- As for Audio formats, there has been no known issues (yet) in choosing any option.
+
+## Defaults
+Here are a list of the actual values being used that are not seen
+
+### Audio and Video Format
+- Video default yt-dlp format value when using "Regular" is "**bv[vcodec\*=avc]**"
+- Audio default yt-dlp format value when using "Regular" is "**140**" or "**139**"
+
+### Extension Option
+- The default extension value upon starting the application is always "mp4".
+
+### Save Location
+- The default save location when first starting the application or not changing the location is the directory the application's exe file is located.
+
+### File Name
+- Default filename is the title of the video unless otherwise stated.
+
+## Config and Log Files
+- The config and log files are located in the "**_internal**" directory in the same folder as the application's exe and are named "**settings.json**" and "**log.txt**" respectively.
 
 ## Future Operating System Support
 - I have no idea when I will add support for systems other than Windows. There is a chance however.
