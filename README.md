@@ -115,8 +115,8 @@ Audio Options Example:
 
 
 # Version
-- Version 2.0.0 (For Windows 10 and 11)
-- Version 1.1.0 (For Windows 8 and Up)
+- Version 2.0.1 (For Windows 10 and 11)
+- Version 1.1.1 (For Windows 8 and Up)
 
 # Things To Know
 Some important things to know when using the application.
@@ -137,6 +137,9 @@ The first few times you run this application, please be ready to wait at least 2
 - From some testing, I found that formats with a codec starting with "avc" were more likely to be supported than formats with codecs starting with "vp", and "av01". I am by no means an expert on codecs and their differences so please try out what is best.
 
 - As for Audio formats, there has been no known issues (yet) in choosing any option.
+
+> [!NOTE]
+> For more information on codecs, visit [this page](https://getstream.io/glossary/video-codecs/).
 
 ## Defaults
 Here are a list of the actual values being used that are not seen
