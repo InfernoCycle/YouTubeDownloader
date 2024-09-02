@@ -170,6 +170,7 @@ Here are a list of the actual values being used that are not seen
 
 ## Bugs and Future Updates
 - There has been reports where the progress bar will freeze even after a download has finished. A fix is in the works.
+- Progress bar may also reach 100% despite a download actually failing.
 
 ## Disclaimer
 I am not responsible for any IP bans or copyright crimes that a user may incur with the use of this product.
