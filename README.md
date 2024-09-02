@@ -171,6 +171,8 @@ Here are a list of the actual values being used that are not seen
 ## Bugs and Future Updates
 - There has been reports where the progress bar will freeze even after a download has finished. A fix is in the works.
 - Progress bar may also reach 100% despite a download actually failing.
+- Future Update: I've been looking into creating a tab to convert files into user's desired format. (October)
+- Future Update: Tab to send downloads to your desired computer location or email as long as another mini receiver I will make is installed and running. (December)
 
 ## Disclaimer
 I am not responsible for any IP bans or copyright crimes that a user may incur with the use of this product.
