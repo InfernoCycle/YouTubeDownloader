@@ -28,6 +28,9 @@ TrueYTtoMP3/Crossfield is a simple downloader for YouTube videos into the format
   * [Disclaimer](#disclaimer)
 * [Sources Used](#sources-used)
 
+# Notice
+Released a New Application (1/04/25) that lets you improve your searches on YouTube so you can find videos more accurately. https://github.com/InfernoCycle/Inferno_YouTube_Filtering
+
 # Installations
 There are only window releases for this program. There will be future updates for linux users someday.
 
