@@ -45,7 +45,8 @@ File|Description
 [Crossfield](https://github.com/InfernoCycle/YouTubeDownloader/releases/download/v1.2.0/Crossfield.zip)|Download zip for Windows 8 and up. (ffmpeg and ffprobe included. Uses PySide2)
 
 # Hash Verification
-Current Hash: 4005732FDC3E1330CEC2E60E2AE713F8050246CAC37728829053F5D4C03670A2
+CrossfieldPlus (SHA-256): **4005732FDC3E1330CEC2E60E2AE713F8050246CAC37728829053F5D4C03670A2**
+Crossfield (SHA-256): **2FC13C960C622C65F563611B6AC88EFDC52E08F41551BBEAF29DE0E8000278C2**
 
 # Getting Started
 Unzip either the 'CrossfieldPlus' or 'Crossfield' zip file and leave the contents inside where they are in the unzipped folder. You can either run the `CrossfieldPlus.exe` or `Crossfield.exe` file directly or create a shortcut to put anywhere on your computer.
