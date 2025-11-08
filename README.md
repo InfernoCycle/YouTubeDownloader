@@ -154,7 +154,7 @@ Here are a list of the actual values being used that are not seen
 
 ### Audio and Video Format
 - Video default yt-dlp format value when using "Regular" is "**bv[vcodec\*=avc]**"
-- Audio default yt-dlp format value when using "Regular" is "**140**" or "**139**"
+- Audio default yt-dlp format value when using "Regular" is "**233**" or "**234**"
 
 ### Extension Option
 - The default extension value upon starting the application is always "mp4".
@@ -177,12 +177,11 @@ Here are a list of the actual values being used that are not seen
 - Please be careful when downloading too much and limit downloads to at most 10 a day.
 
 ## Bugs and Future Updates
-- There has been reports where the progress bar will freeze even after a download has finished. A fix is in the works.
-- Progress bar may also reach 100% despite a download actually failing.
-- No Future updates for now.
+- Doing too many downloads may lead to the download failing due to being capped for a certain amount of time.
+- Hoping to add an update feature to automatically update the current application installed with the newest version I post here.
 
 ## Disclaimer
-I am not responsible for any IP bans or copyright crimes that a user may incur with the use of this product.
+I am not responsible for any IP bans or copyright claims that a user may incur with the use of this product.
 
 # Sources Used
 1. [ffmpeg and ffprobe](https://www.ffmpeg.org/)
