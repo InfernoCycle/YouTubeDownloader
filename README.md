@@ -132,10 +132,10 @@ Some important things to know when using the application.
 ## First Time Running The Application
 The first few times you run this application, please be ready to wait at least 2 to 3 minutes for it to open. This should not happen too many times after using the program.
 
-## Differences between Version 1.1.0 and 2.0.0
-- 1.1.0 uses PySide2 as the GUI framework while 2.0.0 uses PySide6
-- 1.1.0 supports Windows 8 and up while 2.0.0 supports Windows 10 and 11
-- I will focus more on the 2.0.0 version as more and more user's switch to newer operating systems.
+## Differences between Version 1.x.x and 2.x.x
+- 1.x.x uses PySide2 as the GUI framework while 2.x.x uses PySide6
+- 1.x.x supports Windows 8 and up while 2.x.x supports Windows 10 and 11
+- I will focus more on the 2.x.x version as more and more user's switch to newer operating systems.
 
 ## Choosing Correct Video and Audio Options in Formats Tab
 - There are different options that can appear after searching for available formats. Please pay special attention that you choose a format that is supported on your system. There are different video codecs (vcodec value) that may appear which may begin with "vp", "avc", "av01", and any other codec available as shown below (av01 not shown).
