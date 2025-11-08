@@ -29,7 +29,7 @@ TrueYTtoMP3/Crossfield is a simple downloader for YouTube videos into the format
 * [Sources Used](#sources-used)
 
 # Notice
-Released a New Application (1/04/25) that lets you improve your searches on YouTube so you can find videos more accurately. https://github.com/InfernoCycle/Inferno_YouTube_Filtering
+This page will be updated to accomodate the next release of my application to not require users to have to download a new zip every time a new release comes out sometime in 2026.
 
 # Installations
 There are only window releases for this program. There will be future updates for linux users someday.
@@ -41,8 +41,8 @@ Available downloads for the application.
 
 File|Description
 :---|:---
-[CrossfieldPlus](https://github.com/InfernoCycle/YouTubeDownloader/releases/download/v2.2.0/CrossfieldPlus.zip)|Download zip for Windows 10 and 11. (ffmpeg and ffprobe included Uses Pyside6)
-[Crossfield](https://github.com/InfernoCycle/YouTubeDownloader/releases/download/v1.3.0/Crossfield.zip)|Download zip for Windows 8 and up. (ffmpeg and ffprobe included. Uses PySide2)
+[CrossfieldPlus](https://github.com/InfernoCycle/YouTubeDownloader/releases/tag/v2.3.0)|Download zip for Windows 10 and 11. (ffmpeg and ffprobe included Uses Pyside6)
+[Crossfield](https://github.com/InfernoCycle/YouTubeDownloader/releases/download/v1.4.0)|Download zip for Windows 8 and up. (ffmpeg and ffprobe included. Uses PySide2)
 
 # Hash Verification
 CrossfieldPlus (SHA-256): **4005732FDC3E1330CEC2E60E2AE713F8050246CAC37728829053F5D4C03670A2**
