@@ -172,7 +172,7 @@ Here are a list of the actual values being used that are not seen
 - I have no idea when I will add support for systems other than Windows. There is a chance however.
 
 ## Delayed Downloads and Failure of Downloads
-- There is a default delay between downloads set to 5 seconds to avoid getting IP banned.
+- There is a default delay between downloads set to 5 seconds to avoid getting IP banned. However this will not guarantee you will be void of getting temporarily banned for an unknown amount of time.
 - Sometimes downloads will fail due to an invalid URL or the page itself is down or it can also mean you were banned from downloading from that page due to excessive downloads.
 - Please be careful when downloading too much and limit downloads to at most 10 a day.
 
