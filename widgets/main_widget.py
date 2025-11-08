@@ -18,13 +18,14 @@ class WorkerThread(QThread):
     progress = Signal(int, int, int, bool)
     start_enabled = Signal(bool)
     
-    def __init__(self, url, file_ext, path, available, filenames):
+    def __init__(self, url, file_ext, path, available:Available, filenames):
         super().__init__()
         self.url = url
         self.file_ext = file_ext
         self.videobox = available.formats
         self.audiobox = available.audiobox
         self.search_button = available.button
+        self.FormattingSelected = available.SavedChoice
         self.apply_all_one = available.groupings.checkedButton().text()
         self.filenames = filenames
         self.process = None
@@ -34,6 +35,8 @@ class WorkerThread(QThread):
         self.bail = False
         self.name = ""
         self._index = 0
+        self.obtainedTitle = False
+        self.seperator = ","
 
     def end(self):
         self.search_button.setEnabled(True)
@@ -43,24 +46,24 @@ class WorkerThread(QThread):
         self.quit()
         self.bail = True
     
-    def get_id(self, audio:str, vid:str="", option="", multi=True):
+    def get_id(self, audio:str, vid:str="", option="", multi=True, vcodec_t=""):
         id1 = ""
         id2 = ""
-     
+        
         if(not multi):
-            split1 = audio.split("-")
+            split1 = audio.split(self.seperator)
             id1 = split1[-1].strip()
 
             if(id1 == "Regular"):
-                return "ba"
+                return "140/139/ba"
             
             return id1
         
-        split1 = audio.split("-")
-        split2 = vid.split("-")
+        split1 = audio.split(self.seperator) #audio_str
+        split2 = vid.split(self.seperator) #video_str
         id1 = split1[-1].strip()
         id2 = split2[-1].strip()
-
+        
         #vcodes to use: vp09 & avc
         #valid vcodec_filters: vp9, vp9.2, av1, avc
         #print(id1)
@@ -68,24 +71,28 @@ class WorkerThread(QThread):
         
         vcodec = "avc"
         
+        #pre-built boxes
+        bv, ba, b, vcstr, lvcstr, o40, o39, co, plus = ["bv","ba", "b", "bv[vcodec*="+vcodec+"]", "bv[vcodec*="+vcodec_t+"]", "140", "139", "/", "+"]
+        
         if(id1 == "No Audio"):
             if(id2 == "Regular"):
-                return "bv"+"[vcodec*="+vcodec+"]"
-            
+                return vcstr#"bv"+"[vcodec*="+vcodec+"]"
+
             return id2
         
+        #due to high energy usage when using random audio format. It's best to use 139 or 140 (default to this)
         if(id1 == "Regular" and id2 == "Regular"): #video and audio are regular
             #return "bv"
-            return "bv[vcodec*="+vcodec+"]"+"+ba/b"
+            return vcstr+plus+o40+co+vcstr+plus+o39+co+bv+plus+ba
             #return "bv+ba/b*" #get best video and best aduio and combine them to one file. else combine best available formats to one file
         
         if(id1 == "Regular" and id2 != "Regular"): #audio is regular/default, video is different
-            return id2 + "[vcodec*="+vcodec+"]"+"+ba/bv+ba" #get best audio and whatever video option user chose else get best available combined formats
+            return id2+plus+o40+co+id2+plus+o39+co+lvcstr+plus+ba+co+bv+plus+ba #get best audio and whatever video option user chose else get best available combined formats
 
         if(id1 != "Regular" and id2 == "Regular"): #video is regular/default, audio is different
-            return id1 + "+bv[vcodec*="+vcodec+"]"+"/bv[vcodec*="+vcodec+"]" + "+ba" #get best video and whatever audio option user chose else get best available combined formats
+            return id1+plus+vcstr+co+vcstr+plus+o40+co+vcstr+plus+o39+co+bv+plus+ba #get best video and whatever audio option user chose else get best available combined formats
 
-        return id1 + "+" + id2 + "[vcodec*="+vcodec+"]"+"/bv[vcodec*="+vcodec+"]"+"+ba"
+        return id1+plus+id2+co+lvcstr+plus+o39+co+vcstr+plus+ba+co+bv+plus+ba
     
     def run(self):
         self._index = 0
@@ -94,36 +101,58 @@ class WorkerThread(QThread):
 
         error_detected = False
         self.search_button.setEnabled(False)
-        self.apply_all_one = True
+        #self.apply_all_one = True
 
         ffmpeg_path = p1.abspath(p1.dirname(__file__)+"/..") + ""
         log_path = p1.abspath(p1.dirname(__file__)+"/.."+"/log.txt")
+        
+        index = 0
+        
+        useFirstChoice = True
+        if(self.apply_all_one.strip() == "First Only"):
+            useFirstChoice = True
+        else:
+            if(len(self.FormattingSelected) < len(self.url)):
+                useFirstChoice = True
+            else:
+                useFirstChoice = False
         
         for i in self.url:
             self.name = ""
             filename_found = False
             extra_post_process = {}
+            
+            formatIndexOption = None
+            
+            if(useFirstChoice):
+                formatIndexOption = self.FormattingSelected[0]
+            else:
+                formatIndexOption = self.FormattingSelected[index]
+            
+            index+=1
             #to find available formats:
             #PostProcessor FFMPeg: https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/postprocessor/ffmpeg.py
             #Options: https://github.com/ytdl-org/youtube-dl/blob/71b640cc5b2f15a6913a720b589bdd3ed318c154/youtube_dl/options.py#L265
 
             if(self.get_format() == 'aux'):
                 mode="bestaudio"
-                option = self.get_id(audio=self.audiobox.currentText(), option=self.apply_all_one, multi=False)
+                #option = self.get_id(audio=self.audiobox.currentText(), option=self.apply_all_one, multi=False)
+                option = self.get_id(audio=formatIndexOption["audio_id"], option="", multi=False, vcodec_t=formatIndexOption["vcodec"])
                 #print(option)
                 custom = self.file_ext
                 if(self.file_ext == "ogg"):
                     custom = "vorbis"
                 extra_post_process = {"key":"FFmpegExtractAudio", "preferredcodec":custom}
+
             else:
                 mode = "bv*+ba/b"
 
-                option = self.get_id(self.audiobox.currentText(), self.videobox.currentText(), option=self.apply_all_one)
+                #option = self.get_id(self.audiobox.currentText(), self.videobox.currentText(), option=self.apply_all_one)
+                option = self.get_id(formatIndexOption["audio_id"], formatIndexOption["video_id"], option=self.apply_all_one, vcodec_t=formatIndexOption["vcodec"])
                 extra_post_process = {"key":"FFmpegVideoConvertor", "preferedformat":self.file_ext}
                 #print(option)
             
             #print(self.apply_all_one.checkedButton().text())
-            
             time.sleep(5)
             
             if(self.bail):
@@ -147,15 +176,15 @@ class WorkerThread(QThread):
                         self.name = "%(title)s."+self.file_ext
                 #name = "%(title)s.%(ext)s"
 
-                options = {"noplaylist":True, "format":option, "ffmpeg_location":ffmpeg_path, "ignoreerrors":True, "overwrites":False, "progress_hooks":[self.defined], "paths":{"home":self.path}, "outtmpl":{"default":self.name}, 'postprocessors': [extra_post_process]}
+                options = {"noplaylist":True, "format":option, "ffmpeg_location":ffmpeg_path, "ignoreerrors":True, "overwrites":False, "progress_hooks":[self.defined], "paths":{"home":self.path}, "outtmpl":{"default":self.name}, 'postprocessors': [extra_post_process], 'progress_with_newline':False}
                 
                 info = None
                 with yt_dlp.YoutubeDL(options) as ydl:
                     info = ydl.extract_info(i.strip(), download=True)
-                
-                title = ""
+                    title = ""
                 try:
                     title = info["title"]
+                    self.obtainedTitle = False
                 except:
                     pass
                 self.tab_label.emit("Video: " + title)
@@ -177,138 +206,56 @@ class WorkerThread(QThread):
         
         self.start_enabled.emit(True)
         self.search_button.setEnabled(True)
-                #time.sleep(4)
-                #self.process = subprocess.Popen(["cmd.exe", "/c", "cd", "..", "&&", "yt-dlp", "--ffmpeg-location", ffmpeg_path, "-w", "--no-playlist", "-f", option, "--progress-template", "%(progress._percent_str)s", "-P", self.path, "-o", name, i.strip()], stdout=PIPE, encoding="UTF-8")
-                #if(mode == "bestaudio"):
-                 #   self.process = subprocess.Popen(["cmd.exe", "/c", "cd", "..", "&&", "yt-dlp", "-w", "-x", "--audio-format", self.file_ext, "--progress", "-P", self.path, i.strip()], stdout=PIPE, encoding="UTF-8")
-                #else:
-                 #   self.process = subprocess.Popen(["cmd.exe", "/c", "cd", "..", "&&", "yt-dlp", "-w", "-f", self.file_ext, "--progress", "-P", self.path, "-o", "%(title)s."+self.file_ext, i.strip()], stdout=PIPE, encoding="UTF-8")
-                #print(self.process.stdout.read())
-        """
-                if(self.bail):
-                    self.end()
-                    return
-            
-                pattern = "\d+\.\d+%"
-                accepted = False
-                
-                filename_pattern = self.file_ext
-                #self.progress.emit(0, index, self.total)
-                
-                break_out = False
-                
-                lines = self.process.stdout.readlines()
-                
-                count = 0
-                
-                error_detected = False
-                
-                #filepath = ""
-                
-                for i in lines:
-                    print(i)
-                    if(self.bail):
-                        self.end()
-                        return
-                    
-                    column = 1
-                    
-                    if(break_out):
-                        break
-                    
-                    
-                    file_reg = re.search(filename_pattern, i)
-                    
-                    if(file_reg != None and not filename_found):
-                        filepath = re.sub("\."+self.file_ext, "", i.split("\\")[-1])
-                        self.tab_label.emit("Video: " + filepath)
-                        filename_found = True
-                    
-                    
-                    reg = re.search(pattern, i)
-                    #print(i)
-
-                    if(reg != None):
-                        inner_pattern = ".+[^%]"
-                        inner_reg = re.search(inner_pattern, reg.group())
-                        if(inner_reg != None):
-                            accepted = True
-                            try:
-                                perc = float(inner_reg.group())
-                                print(perc)
-                                if(perc > 100):
-                                    continue
-                                self.progress.emit(round(perc, 0), index, self.total, False)
-                            except:
-                                continue
-                          
-                    if(count == len(lines)-1):
-                        if(accepted == True):
-                            break
-                        else:
-                            print("why is it true?")
-                            error_detected = True
-                    
-                    count+=1
-
-                index+=1
-
-                if(accepted):
-                    self.progress.emit(100, index, self.total, False)
-                else:
-                    #error_detected = True
-                    if(count == 0):
-                        self.progress.emit(0, index, self.total, False)
-                    else:
-                        self.progress.emit(100, index, self.total, False)
-                #print("Finished")
-            
-            with open(log_path, "a+") as file:
-                if(error_detected):
-                    self.tab_label.emit("Video: " + filepath + "One or more of the files requested couldn't be downloaded.")
-                    file.write(time.strftime("%m-%d-%Y %H:%M:%S%p", time.localtime(time.time())) + " Download Error: One or more of the files requested couldn't be downloaded either due to failure or it was already downloaded in the selected directory " + "for file \'" + filepath + "\'\n")
-                    file.seek(0)
-                else:
-                    file.write(time.strftime("%m-%d-%Y %H:%M:%S%p", time.localtime(time.time())) + " Download: Successful Download for file \'" + filepath + "\'\n")
-                
-        time.sleep(1.5)
-        
-        self.progress.emit(0,0,0,True)
-
-        self.start_enabled.emit(True)
-        self.search_button.setEnabled(True)
-        """
     
     def defined(self, d):
         if(self.bail):
+            print("Bailing")
             self.end()
             return
         
-        pattern = "\d+\.\d+[^%]"
+        #pattern = "\d+\.\d+[^\%]"
+        pattern = "\d+\.\d+[\%]"
         accepted = False
 
+        """
+        if(not self.obtainedTitle):
+            try:
+                t = d["filename"].split("\\")
+                title = re.sub("\.\w+", "", t[-1])
+                self.tab_label.emit("Video: " + title)
+                self.obtainedTitle = True
+            except Exception as e:
+                print("Title Error: " + str(e))
+        """
         #self.progress.emit(0, index, self.total)
         
         count = 0
+        #print(d)
         
         #filepath = ""
-
         inner_pattern = ".+[^%]"
-        progress = str(round((d["downloaded_bytes"]/d["total_bytes"])*100, 2)) + "%"
-        inner_reg = re.search(pattern, progress)
-        print(progress)
-        print(inner_reg)
-        if(inner_reg != None):
-            #accepted = True
-            try:
-                #print(inner_reg.group())
-                perc = float(inner_reg.group())
-                if(perc > 100):
+        try:
+            #progress = str(round((d["downloaded_bytes"]/d["total_bytes"])*100, 2)) + "%"
+            progress = d['_percent_str']
+            
+            inner_reg = re.search(pattern, progress.strip())
+            #print("Progress: " + str(progress))
+            #print(inner_reg)
+            
+            if(inner_reg != None):
+                #accepted = True
+                try:
+                    #print(inner_reg.group())
+                    perc = float(inner_reg.group().replace("%",""))
+                    if(perc > 100):
+                        pass
+                        #self.progress.emit(100, self._index, self.total, False)
+                    self.progress.emit(round(perc, 0), self._index, self.total, False)
+                except:
                     pass
-                    #self.progress.emit(100, self._index, self.total, False)
-                self.progress.emit(round(perc, 0), self._index, self.total, False)
-            except:
-                pass
+        except Exception as e:
+            print("Error Occurred with progress: " + str(e))
+            pass
 
         #if(accepted):
          #   self.progress.emit(100, self._index, self.total, False)
@@ -434,7 +381,7 @@ class MainWidget(QWidget):
         self.layout.addLayout(button_layouts)
 
         #self.setMinimumSize(400, 300)
-        self.setFixedSize(700, 460)
+        self.setFixedSize(700, 490)
     
     def set_progress(self, value=0, index=0, maxi=0, finished=False):
         if(not finished):
