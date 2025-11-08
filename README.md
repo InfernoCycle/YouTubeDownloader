@@ -123,8 +123,8 @@ Audio Options Example:
 
 
 # Version
-- Version 2.0.1 (For Windows 10 and 11)
-- Version 1.1.1 (For Windows 8 and Up)
+- Version 2.3.0 (For Windows 10 and 11)
+- Version 1.4.0 (For Windows 8 and Up)
 
 # Things To Know
 Some important things to know when using the application.
