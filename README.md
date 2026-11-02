@@ -44,9 +44,9 @@ File|Description
 [Plus](https://github.com/InfernoCycle/YouTubeDownloader/releases/tag/v2.4.0)|Download zip for Windows 10 and 11. (ffmpeg and ffprobe included Uses Pyside6)
 
 # Hash Verification
-Plus (SHA-256): **C0A25FCE4B785A5897D98B97EE71424A960ED520767548BEB4B821205885A719**
+CrossfieldPlus (SHA-256): **C0A25FCE4B785A5897D98B97EE71424A960ED520767548BEB4B821205885A719**
 
-~~ (SHA-256): **69464F8B17E31907F41B3F4E205FA34BED753E9813E59B8D273417E524754D6A**~~
+~~(SHA-256): **69464F8B17E31907F41B3F4E205FA34BED753E9813E59B8D273417E524754D6A**~~
 
 # Getting Started
 Unzip the 'Plus' ~~or 'Crossfield'~~ zip file and leave the contents inside where they are in the unzipped folder. You can run the `CrossfieldPlus.exe` ~~or `Crossfield.exe`~~ file directly or create a shortcut to put anywhere on your computer.
@@ -122,8 +122,8 @@ Audio Options Example:
 
 
 # Version
-- Version 2.3.0 (For Windows 10 and 11)
-- Version 1.4.0 (For Windows 8 and Up)
+- Version 2.4.0 (For Windows 10 and 11)
+~~- Version 1.4.0 (For Windows 8 and Up)~~
 
 # Things To Know
 Some important things to know when using the application.
