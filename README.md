@@ -29,7 +29,7 @@ TrueYTtoMP3/Crossfield is a simple downloader for YouTube videos into the format
 * [Sources Used](#sources-used)
 
 # Notice
-This page will be updated to accomodate the next release of my application to not require users to have to download a new zip every time a new release comes out sometime in 2026.
+New Version has been released as of 11-02-2026. Crossfield will no longer be maintained and I will focus on Crossfield Plus and will try to move a push for Mac and Linux devices.
 
 # Installations
 There are only window releases for this program. There will be future updates for linux users someday.
@@ -41,16 +41,16 @@ Available downloads for the application.
 
 File|Description
 :---|:---
-[CrossfieldPlus](https://github.com/InfernoCycle/YouTubeDownloader/releases/tag/v2.3.0)|Download zip for Windows 10 and 11. (ffmpeg and ffprobe included Uses Pyside6)
-[Crossfield](https://github.com/InfernoCycle/YouTubeDownloader/releases/tag/v1.4.0)|Download zip for Windows 8 and up. (ffmpeg and ffprobe included. Uses PySide2)
+[CrossfieldPlus](https://github.com/InfernoCycle/YouTubeDownloader/releases/tag/v2.4.0)|Download zip for Windows 10 and 11. (ffmpeg and ffprobe included Uses Pyside6)
+~~[Crossfield](https://github.com/InfernoCycle/YouTubeDownloader/releases/tag/v1.4.0)|Download zip for Windows 8 and up. (ffmpeg and ffprobe included. Uses PySide2)~~
 
 # Hash Verification
-CrossfieldPlus (SHA-256): **FFD340E81B06631345C14194CD98973B173F6E5E16B0A1F2AB65B19B3F51ECF1**
+CrossfieldPlus (SHA-256): **C0A25FCE4B785A5897D98B97EE71424A960ED520767548BEB4B821205885A719**
 
-Crossfield (SHA-256): **69464F8B17E31907F41B3F4E205FA34BED753E9813E59B8D273417E524754D6A**
+~~Crossfield (SHA-256): **69464F8B17E31907F41B3F4E205FA34BED753E9813E59B8D273417E524754D6A**~~
 
 # Getting Started
-Unzip either the 'CrossfieldPlus' or 'Crossfield' zip file and leave the contents inside where they are in the unzipped folder. You can either run the `CrossfieldPlus.exe` or `Crossfield.exe` file directly or create a shortcut to put anywhere on your computer.
+Unzip the 'CrossfieldPlus' ~~or 'Crossfield'~~ zip file and leave the contents inside where they are in the unzipped folder. You can either run the `CrossfieldPlus.exe` or `Crossfield.exe` file directly or create a shortcut to put anywhere on your computer.
 
 
 # Usage
