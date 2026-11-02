@@ -42,7 +42,6 @@ Available downloads for the application.
 File|Description
 :---|:---
 [CrossfieldPlus](https://github.com/InfernoCycle/YouTubeDownloader/releases/tag/v2.4.0)|Download zip for Windows 10 and 11. (ffmpeg and ffprobe included Uses Pyside6)
-~~[Crossfield](https://github.com/InfernoCycle/YouTubeDownloader/releases/tag/v1.4.0)|Download zip for Windows 8 and up. (ffmpeg and ffprobe included. Uses PySide2)~~
 
 # Hash Verification
 CrossfieldPlus (SHA-256): **C0A25FCE4B785A5897D98B97EE71424A960ED520767548BEB4B821205885A719**
